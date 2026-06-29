@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RedefineMindHealth - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#1d1b18",
+                        "secondary": "#56624b",
+                        "outline-variant": "#d3c4b2",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-container": "#f3ede6",
+                        "tertiary-fixed": "#f7ddd1",
+                        "surface-container-high": "#ede7e1",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f8f3ec",
+                        "surface-dim": "#dfd9d3",
+                        "secondary-container": "#d7e4c7",
+                        "secondary-fixed-dim": "#becbaf",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#fef8f2",
+                        "on-tertiary-fixed-variant": "#54433a",
+                        "tertiary": "#6d5b51",
+                        "surface-bright": "#fef8f2",
+                        "on-tertiary-container": "#4c3c33",
+                        "primary-fixed-dim": "#f3be65",
+                        "tertiary-fixed-dim": "#dac2b6",
+                        "on-secondary-fixed": "#141e0d",
+                        "on-tertiary-fixed": "#261911",
+                        "on-surface-variant": "#4f4537",
+                        "on-secondary-container": "#5a664f",
+                        "on-secondary-fixed-variant": "#3f4a35",
+                        "inverse-primary": "#f3be65",
+                        "outline": "#817565",
+                        "inverse-surface": "#32302c",
+                        "secondary-fixed": "#dae7ca",
+                        "surface-variant": "#e7e2db",
+                        "surface-tint": "#7e5700",
+                        "surface-container-highest": "#e7e2db",
+                        "primary-container": "#d4a24c",
+                        "primary": "#7e5700",
+                        "primary-fixed": "#ffdeac",
+                        "on-primary-fixed": "#281900",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#f6f0e9",
+                        "tertiary-container": "#bda69b",
+                        "background": "#fef8f2",
+                        "on-surface": "#1d1b18",
+                        "on-primary-container": "#563a00",
+                        "on-primary-fixed-variant": "#604100"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "section-padding-sm": "64px",
+                        "container-max": "1200px",
+                        "unit": "8px",
+                        "section-padding-lg": "120px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["'Source Serif Pro'", "serif"],
+                        "headline-md": ["Recoleta", "serif"],
+                        "display-xl": ["Recoleta", "serif"],
+                        "display-xl-mobile": ["Recoleta", "serif"],
+                        "body-lg": ["'Source Serif Pro'", "serif"],
+                        "accent-script": ["Amarego", "serif"],
+                        "label-sm": ["'Source Serif Pro'", "serif"],
+                        "headline-lg": ["Recoleta", "serif"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }],
+                        "display-xl": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "display-xl-mobile": ["40px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "accent-script": ["1.3em", { "lineHeight": "1", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .blob-sage {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            animation: morph 8s ease-in-out infinite;
+        }
+        .blob-blush {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            animation: morph-reverse 10s ease-in-out infinite;
+        }
+        @keyframes morph {
+            0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+            50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+        }
+        @keyframes morph-reverse {
+            0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+            50% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto bg-background/80 dark:bg-background/80 backdrop-blur-md">
+<a class="font-headline-md text-headline-md text-on-background dark:text-on-background tracking-tight" href="#">RedefineMindHealth</a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary font-semibold border-b-2 border-primary pb-1 hover:text-primary transition-colors duration-300" href="#">About</a>
+<a class="text-on-surface-variant font-body-md font-semibold hover:text-primary transition-colors duration-300" href="#">Services</a>
+<a class="text-on-surface-variant font-body-md font-semibold hover:text-primary transition-colors duration-300" href="#">FAQ</a>
+<a class="text-on-surface-variant font-body-md font-semibold hover:text-primary transition-colors duration-300" href="#">Contact</a>
+</nav>
+<div class="hidden md:block">
+<a class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-primary-container text-on-surface font-label-sm text-label-sm hover:scale-95 transition-transform" href="#">Book a Session</a>
+</div>
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-on-background p-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu</span>
+</button>
+</header>
+<main class="pt-24 pb-section-padding-sm md:pb-section-padding-lg max-w-container-max mx-auto px-gutter md:px-section-padding-sm overflow-hidden">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex flex-col-reverse md:flex-row items-center justify-between gap-12 py-section-padding-sm md:py-section-padding-lg">
+<div class="w-full md:w-1/2 z-10 flex flex-col items-start gap-8">
+<h1 class="font-display-xl-mobile text-display-xl-mobile md:font-display-xl md:text-display-xl text-on-background max-w-2xl">
+                    A space to <span class="font-accent-script text-accent-script text-primary italic">redefine</span> how you feel
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    Providing holistic, tailored psychological care in an environment that feels less like a clinic and more like a sanctuary.
+                </p>
+<a class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-primary-container text-on-surface font-label-sm text-label-sm hover:opacity-90 transition-opacity" href="#">Book a Session</a>
+</div>
+<div class="w-full md:w-1/2 relative h-[512px] md:h-[716px] flex justify-end">
+<div class="absolute inset-0 bg-secondary-container blob-sage opacity-40 mix-blend-multiply filter blur-2xl"></div>
+<img alt="Therapist Portrait" class="relative z-10 w-full h-full object-cover rounded-tl-[100px] rounded-br-[100px] rounded-tr-3xl rounded-bl-3xl shadow-sm" data-alt="A professional yet warm and inviting portrait of a therapist in a boutique clinical setting. The environment features soft, high-key lighting, cream walls, and subtle organic elements like a small potted plant. The therapist exudes trust, empathy, and refined care, matching a holistic mental health approach. Shot in a minimalist, editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWlCuFLky9fnACN_hdLIPSJZTjG4u6gT2sqQ5sSIQ9S6dRpT1RATUuK-_AfT8bjASttWCoC1pV7ke4eUnc0MI-suI6bR5697tIIbrcKsNWWFopB-U7Ap1B0fYveXwrMHIzFnGl-An9uIozrRdkTRSu8yILYliSo6kAL0ADFwhn5SIPWKWWBMgh1F7n7lBB380JmUqJ3969qJQsxDSjiIRc-I43S59o52lckwPslAwzoFLc76GqUZhIgQ"/>
+</div>
+</section>
+<!-- Intro Section -->
+<section class="relative py-section-padding-sm md:py-section-padding-lg flex flex-col md:flex-row items-center gap-12 md:gap-24">
+<div class="absolute -left-20 top-10 w-64 h-64 bg-tertiary-fixed blob-blush opacity-30 mix-blend-multiply filter blur-3xl -z-10"></div>
+<div class="w-full md:w-1/3 relative">
+<div class="aspect-square overflow-hidden rounded-[40px] shadow-sm bg-surface-variant relative">
+<img class="w-full h-full object-cover" data-alt="A close-up detail shot of hands holding a warm mug of tea, resting on a textured woven throw blanket. The setting is a cozy, minimal consultation room with light oak wood tones and natural sunlight filtering through sheer curtains. The mood is immediately calming, de-escalating, and safe, perfectly aligning with a boutique clinical aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq6qUEIE4GbfOlp-yrdiuH7adRmj15g0TZwOjk9p1gz5ER9nq4AwoYoITrX3Dy5kqrlaaD643seaI6UQJONkPIKshSE8yzCJIW_VoBC8SVpmlst4jzuaMjUoyc5kQJn0yanxUle-lH3m9HdmQivnKAIVMeCPRPYD4ySFDwDqmYgzj2oU-C9x7BGKV8EC4W1o6NNVZfTI9QkyZj-u881dvDasy0og8OOgtFtdBbFr8oETmkzrkczGTn_A"/>
+</div>
+</div>
+<div class="w-full md:w-2/3">
+<h2 class="font-headline-md text-headline-md mb-6">Welcome to a different kind of practice.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+                    Therapy doesn't have to feel clinical to be effective. We believe that a comforting environment is the first step toward healing. Our approach blends evidence-based treatments with a deep understanding of your unique narrative, providing you the breathing room needed to explore, understand, and grow.
+                </p>
+</div>
+</section>
+<!-- Services Teaser -->
+<section class="py-section-padding-sm md:py-section-padding-lg">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md">Areas of Focus</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">Tailored support for your specific journey.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="bg-surface p-8 rounded-2xl shadow-[0_4px_20px_rgba(49,48,44,0.05)] border border-surface-variant flex flex-col h-full hover:-translate-y-1 transition-transform duration-300 group">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">person</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-xl mb-4">Individual Therapy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Dedicated one-on-one sessions to explore personal challenges and develop coping strategies in a secure space.</p>
+<a class="font-label-sm text-label-sm text-secondary group-hover:text-primary transition-colors inline-flex items-center gap-2" href="#">Learn more <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Service 2 -->
+<div class="bg-surface p-8 rounded-2xl shadow-[0_4px_20px_rgba(49,48,44,0.05)] border border-surface-variant flex flex-col h-full hover:-translate-y-1 transition-transform duration-300 group">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-xl mb-4">Couples Counseling</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Navigating relational dynamics to foster communication, rebuild trust, and strengthen emotional connection.</p>
+<a class="font-label-sm text-label-sm text-secondary group-hover:text-primary transition-colors inline-flex items-center gap-2" href="#">Learn more <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Service 3 -->
+<div class="bg-surface p-8 rounded-2xl shadow-[0_4px_20px_rgba(49,48,44,0.05)] border border-surface-variant flex flex-col h-full hover:-translate-y-1 transition-transform duration-300 group">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-xl mb-4">Group Sessions</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Guided collective experiences offering shared perspectives and community support for specific life transitions.</p>
+<a class="font-label-sm text-label-sm text-secondary group-hover:text-primary transition-colors inline-flex items-center gap-2" href="#">Learn more <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section class="py-section-padding-sm md:py-section-padding-lg my-12 rounded-3xl bg-secondary-container px-gutter relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-surface blob-sage opacity-20 -mr-20 -mt-20"></div>
+<div class="max-w-3xl mx-auto text-center relative z-10">
+<span class="material-symbols-outlined text-4xl text-on-secondary-container/50 mb-6 block">format_quote</span>
+<p class="font-headline-md text-headline-md text-2xl md:text-4xl text-on-secondary-container italic leading-relaxed mb-8">
+                    "Finding this space felt like taking a deep breath after holding it for years. The environment is so calming, and the guidance is incredibly intuitive."
+                </p>
+<div class="font-accent-script text-accent-script text-xl text-on-secondary-container italic">
+                    - S.M.
+                </div>
+</div>
+</section>
+<!-- Grid Section -->
+<section class="py-section-padding-sm md:py-section-padding-lg">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
+<!-- Tile 1: About -->
+<div class="md:col-span-8 rounded-[32px] relative overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A wide architectural shot of a serene, minimally decorated therapy waiting area. Features include a curved cream sofa, a soft textured rug, and a large window letting in diffused natural light. The aesthetic is boutique clinical, prioritizing whitespace and calming organic shapes to create a sense of immediate de-escalation and professional care." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHpAbTZAhndlNC2314GHtECtJmb0m--AD7ABhfos0obH6DwgVd7zTG-s981RIlxMLh4_G6FRUfRcAJHTQnrGThoFSOrApZIm8JhsQ3ZF4a1oVtxjCN_UcogTYZ9ZuyS2IVKkdYG1uNilzGPE1HtMzACZzXpawr0Idj7TPwc3-UmeCIxkYZQkoWVA8iX9fDvIPF9E6QcpXTAhl-KBwMrxgJIVvEceLEogpiK755hvOGdyRCaMfaqfQwHg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 text-on-primary">
+<h3 class="font-headline-md text-headline-md mb-2">Our Philosophy</h3>
+<p class="font-body-md text-body-md mb-4 opacity-90 max-w-md">Learn about our holistic approach to mental well-being.</p>
+<a class="inline-block border border-on-primary text-on-primary px-6 py-2 rounded-full font-label-sm text-label-sm hover:bg-on-primary hover:text-on-background transition-colors" href="#">About Us</a>
+</div>
+</div>
+<!-- Tile 2: Services Detail -->
+<div class="md:col-span-4 rounded-[32px] bg-tertiary-fixed p-8 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-tertiary-fixed mb-4">Detailed Offerings</h3>
+<p class="font-body-md text-body-md text-on-tertiary-fixed-variant">Explore the specific modalities and therapeutic frameworks we utilize in our practice.</p>
+</div>
+<a class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-surface text-on-surface font-label-sm text-label-sm hover:opacity-90 transition-opacity w-fit mt-8" href="#">View Services</a>
+</div>
+<!-- Tile 3: FAQ -->
+<div class="md:col-span-12 rounded-[32px] relative overflow-hidden group bg-surface-container-high flex flex-col md:flex-row items-center">
+<div class="w-full md:w-1/2 h-[300px] relative">
+<img class="w-full h-full object-cover" data-alt="A minimalist still life composition featuring a stack of linen-bound books, a ceramic mug, and a sprig of dried eucalyptus on a soft blush-colored table. The lighting is soft and shadowless, conveying a sense of thoughtful inquiry, calm, and preparation, fitting for a section addressing common questions about therapy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmVzLR8kQNvP4QFs5lBzCogJcZSv8jGX_9BXpPjPS-dbm5lmNvyiTPAheXyE9B_3tyWBK8Q1cB5TrNbZgWA2wsYxYUsg2_Y-JgCEkqYmNTVoI_cG5IrqbNL6-5ku7PKHRfHRslBdhZQMOUi6DLHeMFyEwacfrlt4Pn8ok6MgiEDJIgxeQGLD53GHkoaq4dzXxNiuIDefVVcTrDzPLi1Pg60SkzNMEtaiEi65rKiUe5odOlZ9KVGBGiUw"/>
+</div>
+<div class="w-full md:w-1/2 p-8 md:p-12">
+<h3 class="font-headline-md text-headline-md mb-4">Common Questions</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">What to expect from your first session, insurance details, and more.</p>
+<a class="inline-flex items-center gap-2 font-label-sm text-label-sm text-on-surface hover:text-primary transition-colors" href="#">Read FAQ <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding-sm px-gutter flex flex-col md:flex-row justify-between items-start gap-8 bg-surface-container dark:bg-surface-container-high border-t border-outline-variant dark:border-outline">
+<div>
+<div class="font-headline-md text-headline-md text-on-surface dark:text-on-surface mb-2">RedefineMindHealth</div>
+<div class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim">
+                © 2024 RedefineMindHealth. All rights reserved.
+            </div>
+</div>
+<nav class="flex flex-col md:flex-row gap-4 md:gap-8">
+<a class="text-on-surface-variant font-body-md font-semibold hover:text-primary transition-colors duration-200" href="#">Contact</a>
+<a class="text-on-surface-variant font-body-md font-semibold hover:text-primary transition-colors duration-200" href="#">Location</a>
+<a class="text-on-surface-variant font-body-md font-semibold hover:text-primary transition-colors duration-200" href="#">Privacy Policy</a>
+</nav>
+</footer>
+</body></html>

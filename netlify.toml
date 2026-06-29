@@ -1,0 +1,26 @@
+[build]
+  command   = "npm run build"
+  publish   = "dist"
+  functions = "netlify/functions"
+
+# SPA fallback — all routes serve index.html so React Router handles them.
+# Without this, refreshing /about or /admin would 404 on Netlify.
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
+
+# Environment variables to set in the Netlify dashboard
+# (Dashboard → Site → Environment variables):
+#
+#   ADMIN_PASSWORD           = <strong password for Harshika's admin login>
+#   GITHUB_APP_ID            = <from GitHub App settings>
+#   GITHUB_PRIVATE_KEY       = <App private key, base64-encoded>
+#   GITHUB_INSTALLATION_ID   = <from GitHub App installations page>
+#   GITHUB_OWNER             = <her GitHub username>
+#   GITHUB_REPO              = <repo name, e.g. redefinemindhealth-site>
+#   CONTENT_FILE_PATH        = public/content/site.json
+#   VITE_CONTENT_URL         = https://raw.githubusercontent.com/<owner>/<repo>/main/public/content/site.json
+#
+# VITE_CONTENT_URL is the raw GitHub URL the public site fetches content from
+# at runtime — this is what makes content updates instant (no rebuild needed).

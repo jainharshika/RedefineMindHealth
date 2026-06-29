@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+/* =========================================================================
+   Boutique Therapeutic Serenity — design tokens ported from the Stitch
+   DESIGN.md / code.html so the original utility class names keep working.
+   Fonts are the licensed-free swaps:
+     Recoleta        -> Fraunces        (headlines)
+     Source Serif Pro-> Source Serif 4  (body, exact free match)
+     Amarego         -> Mr Dafoe        (script accent)
+   ========================================================================= */
+@theme {
+  /* --- Color tokens (Material-style roles from DESIGN.md) --- */
+  --color-background: #fef8f2;
+  --color-on-background: #1d1b18;
+  --color-surface: #fef8f2;
+  --color-surface-dim: #dfd9d3;
+  --color-surface-bright: #fef8f2;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f8f3ec;
+  --color-surface-container: #f3ede6;
+  --color-surface-container-high: #ede7e1;
+  --color-surface-container-highest: #e7e2db;
+  --color-surface-variant: #e7e2db;
+  --color-on-surface: #1d1b18;
+  --color-on-surface-variant: #4f4537;
+  --color-inverse-surface: #32302c;
+  --color-inverse-on-surface: #f6f0e9;
+  --color-outline: #817565;
+  --color-outline-variant: #d3c4b2;
+
+  --color-primary: #7e5700;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #d4a24c;
+  --color-on-primary-container: #563a00;
+  --color-inverse-primary: #f3be65;
+  --color-primary-fixed: #ffdeac;
+  --color-primary-fixed-dim: #f3be65;
+  --color-on-primary-fixed: #281900;
+  --color-on-primary-fixed-variant: #604100;
+
+  --color-secondary: #56624b;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #d7e4c7;
+  --color-on-secondary-container: #5a664f;
+  --color-secondary-fixed: #dae7ca;
+  --color-secondary-fixed-dim: #becbaf;
+  --color-on-secondary-fixed: #141e0d;
+  --color-on-secondary-fixed-variant: #3f4a35;
+
+  --color-tertiary: #6d5b51;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #bda69b;
+  --color-on-tertiary-container: #4c3c33;
+  --color-tertiary-fixed: #f7ddd1;
+  --color-tertiary-fixed-dim: #dac2b6;
+  --color-on-tertiary-fixed: #261911;
+  --color-on-tertiary-fixed-variant: #54433a;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  /* --- Font families (free swaps) --- */
+  --font-display-xl: "Fraunces", serif;
+  --font-display-xl-mobile: "Fraunces", serif;
+  --font-headline-lg: "Fraunces", serif;
+  --font-headline-md: "Fraunces", serif;
+  --font-body-lg: "Source Serif 4", serif;
+  --font-body-md: "Source Serif 4", serif;
+  --font-label-sm: "Source Serif 4", serif;
+  --font-accent-script: "Mr Dafoe", cursive;
+
+  /* --- Type scale (size + line-height + weight + tracking) --- */
+  --text-display-xl: 64px;
+  --text-display-xl--line-height: 1.1;
+  --text-display-xl--font-weight: 500;
+  --text-display-xl--letter-spacing: -0.02em;
+
+  --text-display-xl-mobile: 40px;
+  --text-display-xl-mobile--line-height: 1.2;
+  --text-display-xl-mobile--font-weight: 500;
+
+  --text-headline-lg: 48px;
+  --text-headline-lg--line-height: 1.2;
+  --text-headline-lg--font-weight: 500;
+
+  --text-headline-md: 32px;
+  --text-headline-md--line-height: 1.3;
+  --text-headline-md--font-weight: 500;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 1.6;
+  --text-body-lg--font-weight: 400;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 1.6;
+  --text-body-md--font-weight: 400;
+
+  --text-accent-script: 1.3em;
+  --text-accent-script--line-height: 1;
+  --text-accent-script--font-weight: 400;
+
+  --text-label-sm: 14px;
+  --text-label-sm--line-height: 1.4;
+  --text-label-sm--font-weight: 600;
+  --text-label-sm--letter-spacing: 0.05em;
+
+  /* --- Spacing tokens --- */
+  --spacing-gutter: 24px;
+  --spacing-margin-mobile: 20px;
+  --spacing-section-padding-sm: 64px;
+  --spacing-section-padding-lg: 120px;
+  --spacing-container-max: 1200px;
+
+  /* --- Radius tokens --- */
+  --radius-sm: 0.5rem;
+  --radius: 1rem;
+  --radius-md: 1.5rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+}
+
+/* max-w-container-max helper */
+@utility max-w-container-max {
+  max-width: 1200px;
+}
+
+@layer base {
+  body {
+    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    font-family: var(--font-body-md);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Global: no sharp edges anywhere */
+  input, textarea, select {
+    border-radius: 0.75rem;
+  }
+
+  img {
+    border-radius: 0.5rem;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  }
+}
+
+/* --- Organic morphing blobs (DESIGN.md "Blob layer") --- */
+.blob-sage {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: morph 8s ease-in-out infinite;
+}
+.blob-blush {
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: morph-reverse 10s ease-in-out infinite;
+}
+@keyframes morph {
+  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  50%      { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+}
+@keyframes morph-reverse {
+  0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+  50%      { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob-sage, .blob-blush { animation: none; }
+}
